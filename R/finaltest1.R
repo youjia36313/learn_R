@@ -1,0 +1,21 @@
+#final_1
+df_1<-read.csv('R_final_1.csv')
+options(digits=7)
+df_1
+options(digits=10)
+by(df_1,df_1$Gender,summary)
+df_2<-subset(df_1,Gender=='f')
+df_2
+var(df_2$Height)
+df_3<-subset(df_1,Gender=='m')
+#df_3 male
+df_3
+df_4<-subset(df_3,Age>=20)
+df_4
+median(df_4$Height)
+df_3
+var(df_3$Height,df_3$Score)
+df_1
+var(df_1$Height,df_1$Score)
+cor(df_1$Height,df_1$Score)
+cor(df_3$Height,df_3$Score)
